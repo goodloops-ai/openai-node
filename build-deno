@@ -5,6 +5,8 @@ set -exuo pipefail
 rm -rf deno; mkdir deno
 cp -rp src/* deno
 
+jscodeshift -t ./scripts/streamtogether.js --parser=tsx --extensions=tsx,ts ./deno/lib/ChatCompletionStream.ts
+
 # x-release-please-start-version
 cat << EOF > deno/README.md
 # OpenAI Node API Library - Deno build

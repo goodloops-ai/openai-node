@@ -13,6 +13,7 @@ rm -rf dist; mkdir dist
 # the source map for index.js.map will refer to ./src/index.ts etc
 cp -rp src README.md dist
 rm dist/src/_shims/*-deno.ts dist/src/_shims/auto/*-deno.ts
+
 for file in LICENSE CHANGELOG.md; do
   if [ -e "${file}" ]; then cp "${file}" dist; fi
 done
