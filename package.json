@@ -1,5 +1,5 @@
 {
-  "name": "openai",
+  "name": "openai-together",
   "version": "4.28.4",
   "description": "The official TypeScript library for the OpenAI API",
   "author": "OpenAI <support@openai.com>",
