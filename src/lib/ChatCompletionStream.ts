@@ -259,9 +259,12 @@ function finalizeChatCompletion(snapshot: ChatCompletionSnapshot): ChatCompletio
     id,
     choices: choices.map(
       ({ message, finish_reason, index, logprobs, ...choiceRest }): ChatCompletion.Choice => {
+        //@ts-ignore
+        finish_reason = !finish_reason ?? snapshot.finish_reason;
         if (!finish_reason) throw new OpenAIError(`missing finish_reason for choice ${index}`);
         const { content = null, function_call, tool_calls, ...messageRest } = message;
-        const role = message.role as 'assistant'; // this is what we expect; in theory it could be different which would make our types a slight lie but would be fine.
+        //@ts-ignore
+        const role = (message.role as 'assistant') || 'assistant'; // this is what we expect; in theory it could be different which would make our types a slight lie but would be fine.
         if (!role) throw new OpenAIError(`missing role for choice ${index}`);
         if (function_call) {
           const { arguments: args, name } = function_call;

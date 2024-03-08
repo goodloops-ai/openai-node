@@ -160,12 +160,9 @@ function propsForError(value: any): string {
 }
 
 function getName(value: any): string | undefined {
-  return (
-    getStringFromMaybeBuffer(value.name) ||
-    getStringFromMaybeBuffer(value.filename) ||
-    // For fs.ReadStream
-    getStringFromMaybeBuffer(value.path)?.split(/[\\/]/).pop()
-  );
+  return (getStringFromMaybeBuffer(value.name) ||
+  getStringFromMaybeBuffer(value.filename) || // For fs.ReadStream
+  getStringFromMaybeBuffer(value.path)?.split(/[\\/]/).pop());
 }
 
 const getStringFromMaybeBuffer = (x: string | Buffer | unknown): string | undefined => {
