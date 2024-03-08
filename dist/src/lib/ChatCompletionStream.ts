@@ -260,7 +260,7 @@ function finalizeChatCompletion(snapshot: ChatCompletionSnapshot): ChatCompletio
     choices: choices.map(
       ({ message, finish_reason, index, logprobs, ...choiceRest }): ChatCompletion.Choice => {
                 //@ts-ignore
-        finish_reason ||= snapshot.finish_reason;
+        finish_reason = finish_reason ? finish_reason : snapshot.finish_reason;
         if (!finish_reason) throw new OpenAIError(`missing finish_reason for choice ${index}`);
         const { content = null, function_call, tool_calls, ...messageRest } = message;
                 //@ts-ignore
