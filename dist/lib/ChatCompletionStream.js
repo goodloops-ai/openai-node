@@ -229,7 +229,7 @@ function finalizeChatCompletion(snapshot) {
         id,
         choices: choices.map(({ message, finish_reason, index, logprobs, ...choiceRest }) => {
             //@ts-ignore
-            finish_reason = !finish_reason ?? snapshot.finish_reason;
+            finish_reason || (finish_reason = snapshot.finish_reason);
             if (!finish_reason)
                 throw new error_1.OpenAIError(`missing finish_reason for choice ${index}`);
             const { content = null, function_call, tool_calls, ...messageRest } = message;
