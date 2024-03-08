@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import { isRequestOptions } from 'openai/core';
-import * as FilesAPI from 'openai/resources/beta/threads/messages/files';
-import { CursorPage } from 'openai/pagination';
+import { APIResource } from '../../../../resource.mjs';
+import { isRequestOptions } from '../../../../core.mjs';
+import * as FilesAPI from '../../../../resources/beta/threads/messages/files.mjs';
+import { CursorPage } from '../../../../pagination.mjs';
 export class Files extends APIResource {
     /**
      * Retrieves a message file.

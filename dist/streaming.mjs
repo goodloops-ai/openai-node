@@ -1,6 +1,6 @@
 import { ReadableStream } from "./_shims/index.mjs";
 import { OpenAIError } from "./error.mjs";
-import { APIError } from 'openai/error';
+import { APIError } from './error.mjs';
 export class Stream {
     constructor(iterator, controller) {
         this.iterator = iterator;

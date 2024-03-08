@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
 import { PassThrough } from 'stream';
-import { ParsingToolFunction, ChatCompletionStreamingRunner, } from 'openai/resources/beta/chat/completions';
+import { ParsingToolFunction, ChatCompletionStreamingRunner, } from '../resources/beta/chat/completions.mjs';
 import { Response } from 'node-fetch';
 import { isAssistantMessage } from "./chatCompletionUtils.mjs";
 /**

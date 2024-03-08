@@ -10,9 +10,9 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
 var _ChatCompletionStream_instances, _ChatCompletionStream_currentChatCompletionSnapshot, _ChatCompletionStream_beginRequest, _ChatCompletionStream_addChunk, _ChatCompletionStream_endRequest, _ChatCompletionStream_accumulateChatCompletion;
-import { OpenAIError, APIUserAbortError } from 'openai/error';
+import { OpenAIError, APIUserAbortError } from '../error.mjs';
 import { AbstractChatCompletionRunner, } from "./AbstractChatCompletionRunner.mjs";
-import { Stream } from 'openai/streaming';
+import { Stream } from '../streaming.mjs';
 export class ChatCompletionStream extends AbstractChatCompletionRunner {
     constructor() {
         super(...arguments);

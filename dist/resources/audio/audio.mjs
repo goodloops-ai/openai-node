@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import * as SpeechAPI from 'openai/resources/audio/speech';
-import * as TranscriptionsAPI from 'openai/resources/audio/transcriptions';
-import * as TranslationsAPI from 'openai/resources/audio/translations';
+import { APIResource } from '../../resource.mjs';
+import * as SpeechAPI from '../../resources/audio/speech.mjs';
+import * as TranscriptionsAPI from '../../resources/audio/transcriptions.mjs';
+import * as TranslationsAPI from '../../resources/audio/translations.mjs';
 export class Audio extends APIResource {
     constructor() {
         super(...arguments);

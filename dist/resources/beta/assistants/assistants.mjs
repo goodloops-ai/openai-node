@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import { isRequestOptions } from 'openai/core';
-import * as AssistantsAPI from 'openai/resources/beta/assistants/assistants';
-import * as FilesAPI from 'openai/resources/beta/assistants/files';
-import { CursorPage } from 'openai/pagination';
+import { APIResource } from '../../../resource.mjs';
+import { isRequestOptions } from '../../../core.mjs';
+import * as AssistantsAPI from '../../../resources/beta/assistants/assistants.mjs';
+import * as FilesAPI from '../../../resources/beta/assistants/files.mjs';
+import { CursorPage } from '../../../pagination.mjs';
 export class Assistants extends APIResource {
     constructor() {
         super(...arguments);

@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import { isRequestOptions } from 'openai/core';
-import * as MessagesAPI from 'openai/resources/beta/threads/messages/messages';
-import * as RunsAPI from 'openai/resources/beta/threads/runs/runs';
+import { APIResource } from '../../../resource.mjs';
+import { isRequestOptions } from '../../../core.mjs';
+import * as MessagesAPI from '../../../resources/beta/threads/messages/messages.mjs';
+import * as RunsAPI from '../../../resources/beta/threads/runs/runs.mjs';
 export class Threads extends APIResource {
     constructor() {
         super(...arguments);

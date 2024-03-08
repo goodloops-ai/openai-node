@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import * as AssistantsAPI from 'openai/resources/beta/assistants/assistants';
-import * as ChatAPI from 'openai/resources/beta/chat/chat';
-import * as ThreadsAPI from 'openai/resources/beta/threads/threads';
+import { APIResource } from '../../resource.mjs';
+import * as AssistantsAPI from '../../resources/beta/assistants/assistants.mjs';
+import * as ChatAPI from '../../resources/beta/chat/chat.mjs';
+import * as ThreadsAPI from '../../resources/beta/threads/threads.mjs';
 export class Beta extends APIResource {
     constructor() {
         super(...arguments);

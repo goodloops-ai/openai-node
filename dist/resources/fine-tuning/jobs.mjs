@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import { isRequestOptions } from 'openai/core';
-import * as JobsAPI from 'openai/resources/fine-tuning/jobs';
-import { CursorPage } from 'openai/pagination';
+import { APIResource } from '../../resource.mjs';
+import { isRequestOptions } from '../../core.mjs';
+import * as JobsAPI from '../../resources/fine-tuning/jobs.mjs';
+import { CursorPage } from '../../pagination.mjs';
 export class Jobs extends APIResource {
     /**
      * Creates a fine-tuning job which begins the process of creating a new model from

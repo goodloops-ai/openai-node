@@ -1,11 +1,11 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import { ChatCompletionRunner } from 'openai/lib/ChatCompletionRunner';
+import { APIResource } from '../../../resource.mjs';
+import { ChatCompletionRunner } from '../../../lib/ChatCompletionRunner.mjs';
 export { ChatCompletionRunner } from 'openai/lib/ChatCompletionRunner';
-import { ChatCompletionStreamingRunner, } from 'openai/lib/ChatCompletionStreamingRunner';
+import { ChatCompletionStreamingRunner, } from '../../../lib/ChatCompletionStreamingRunner.mjs';
 export { ChatCompletionStreamingRunner, } from 'openai/lib/ChatCompletionStreamingRunner';
 export { ParsingFunction, ParsingToolFunction, } from 'openai/lib/RunnableFunction';
-import { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';
+import { ChatCompletionStream } from '../../../lib/ChatCompletionStream.mjs';
 export { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';
 export class Completions extends APIResource {
     runFunctions(body, options) {

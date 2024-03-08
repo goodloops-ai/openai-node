@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import * as CompletionsAPI from 'openai/resources/beta/chat/completions';
+import { APIResource } from '../../../resource.mjs';
+import * as CompletionsAPI from '../../../resources/beta/chat/completions.mjs';
 export class Chat extends APIResource {
     constructor() {
         super(...arguments);

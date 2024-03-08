@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless.
-import { APIResource } from 'openai/resource';
-import { isRequestOptions } from 'openai/core';
-import * as StepsAPI from 'openai/resources/beta/threads/runs/steps';
-import { CursorPage } from 'openai/pagination';
+import { APIResource } from '../../../../resource.mjs';
+import { isRequestOptions } from '../../../../core.mjs';
+import * as StepsAPI from '../../../../resources/beta/threads/runs/steps.mjs';
+import { CursorPage } from '../../../../pagination.mjs';
 export class Steps extends APIResource {
     /**
      * Retrieves a run step.
