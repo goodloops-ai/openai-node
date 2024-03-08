@@ -263,7 +263,10 @@ function finalizeChatCompletion(snapshot: ChatCompletionSnapshot): ChatCompletio
         if (!finish_reason) {
           console.log("NO FINISH REASON, TRY TOGETHER HACK", finish_reason, snapshot);
           //@ts-ignore
-          finish_reason = snapshot.finish_reason;;
+          finish_reason = snapshot.finish_reason;
+          if (finish_reason === null){
+             finish_reason = 'length';
+          }
         }
         if (!finish_reason) throw new OpenAIError(`missing finish_reason for choice ${index}`);
         const { content = null, function_call, tool_calls, ...messageRest } = message;
